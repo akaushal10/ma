@@ -5,14 +5,21 @@ class HelloClass extends Component {
     this.state = {
       counter: 0,
     };
+    console.log("Constructor called")
   }
   increment = () => {
     this.setState({
       counter: this.state.counter + 1,
     });
   };
-
+  componentDidMount(){
+    console.log("componentDidMount called")
+  }
+  componentDidUpdate(){
+    console.log("componentDidUpdate called")
+  }
   render() {
+    console.log("Render called")
     return (
       <>
         <div className="border shadow text-center p-5 m-5">

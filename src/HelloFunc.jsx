@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 const HelloFunc = (props) => {
   const [counter, setCounter] = useState(props.counter);
   const increment = () => {
     setCounter(counter + 1);
   };
+  const a =()=>{
+    console.log("In function componentDidMount")
+  } 
+  const b =()=>{
+    console.log("In function componentDidUpdate")
+  } 
+
+  useEffect(a,[]) //componentDidMount
+  useEffect(b,[counter]) //componentDidUpdate
+
   return (
     <>
       <div className="border shadow text-center p-5 m-5">
