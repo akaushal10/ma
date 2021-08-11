@@ -22,35 +22,25 @@ const UserForm = () => {
   const handleSignup = () => {
     setFormType("signup");
   };
-  if (formType == "login") {
-    return (
-      <>
-        <Login />
-        <div className="text-center">
-          <button className="btn btn-success fw-bold" onClick={handleLogin}>
-            Show Login Form
-          </button>
-          <button className="btn btn-primary fw-bold" onClick={handleSignup}>
-            Show Signup Form
-          </button>
-        </div>
-      </>
-    );
-  }
-  if (formType == "signup") {
-    return (
-      <>
+  return (
+    <>
+      {formType === "login" ? (
+        <>
+          <Login />
+          <h2>hello</h2>
+        </>
+      ) : (
         <SignUp />
-        <div className="text-center">
-          <button className="btn btn-success fw-bold" onClick={handleLogin}>
-            Show Login Form
-          </button>
-          <button className="btn btn-primary fw-bold" onClick={handleSignup}>
-            Show Signup Form
-          </button>
-        </div>
-      </>
-    );
-  }
+      )}
+      <div className="text-center">
+        <button className="btn btn-success fw-bold" onClick={handleLogin}>
+          Show Login Form
+        </button>
+        <button className="btn btn-primary fw-bold" onClick={handleSignup}>
+          Show Signup Form
+        </button>
+      </div>
+    </>
+  );
 };
 export default UserForm;
