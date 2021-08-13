@@ -4,6 +4,8 @@ import HelloClass from "./HelloClass";
 import UserForm from "./UserForm";
 import HelloWithMap from "./HelloWithMap";
 import RegistrationForm from "./RegistrationForm";
+import LoginForm from "./LoginForm";
+import Home from "./Home";
 
 function App() {
   const friend = ["Mohini", "Abhishek", "Chanchal", "Aman", "Anshul"];
@@ -28,7 +30,7 @@ function App() {
       {friendsDetails.map(({ name, salary }, index) => (
         <HelloWithMap name={name} salary={salary} key={index} />
       ))} */}
-      <RegistrationForm/>
+      <Home/>
     </>
   );
 }
